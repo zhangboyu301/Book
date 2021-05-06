@@ -1,0 +1,169 @@
+#list{
+    width: 100%; 
+    height: 90%;  
+    box-sizing:border-box; 
+    position: absolute;  
+}
+
+#list .item{ 
+    display: flex;
+    justify-content: space-around;
+    width: 94%; 
+    height: auto;
+    padding:1% 1%;
+    margin: 2% 2%;
+    line-height: 50px;   
+    overflow: hidden; 
+    border-radius: 15px;  
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+}
+#list .item:hover{
+    background: #ECEFF1; 
+}
+
+ 
+#list .number{
+    float: left;
+    height: auto;   
+    width:calc(90% - 50px);
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+} 
+
+#list .img{
+    float: left;
+    width: 50px; 
+    height: 50px;   
+    border-radius: 50%;
+    background: #EEEEEE;
+    position: relative;
+    z-index: 98; 
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    color: #616161; 
+    font-weight: 800;
+    transform: scale(.8);
+}
+.p-img{
+    position:absolute; 
+    width: 100%;
+    background: #EEEEEE;
+    height: 100%;
+    z-index: 100;  
+    transform: translateY(100px);
+    top: 0;
+    left: 0;
+}
+#list .item:hover .edit{
+    right: 5%;
+     
+}
+.edit{
+    position:absolute;
+    right: -50%;
+    transition: .5s;
+} 
+
+#scroll{
+    height: 82vh;
+    overflow-y: scroll;
+} 
+.baseLine{
+    height: auto;
+    width: 100%; 
+    text-align: center;
+    background: #fff;
+}
+
+
+#scroll::-webkit-scrollbar { width: 0 !important }
+ 
+#scroll::before{
+    content: ' ';
+    margin-top: 8%;
+    height: 4vw ;
+    width: 100%; 
+    display: block;
+}
+#scroll{
+    /* scroll-behavior: smooth; 会造成不能瞬间移动*/
+    perspective:150;
+    -webkit-perspective:150;
+}
+ 
+
+
+
+.phoneNameC span{
+    margin: 8px 0;
+}
+#phoneNameContainer{
+    overflow: hidden;
+    /* 触发 bfc 消除边距问题导致的精度问题 */
+}
+
+.loading{
+    background: #fff;
+    height: 20px;
+    position: relative;
+} 
+.loadingAni{
+    width: 100%;
+    height: 20px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: absloute;
+     
+}
+.loadingAni div:nth-child(1){
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%; 
+    z-index: 100;
+    border-radius: 15px;
+    animation: changeL .8s infinite;
+    transition: 1s;
+    background: #fbc531; 
+}   
+.loadingAni div:nth-child(2){
+    position: absolute; 
+    height: 100%;
+    width: 20%; 
+    z-index: 200;
+    border-radius: 15px;
+    background:#00a8ff; 
+    animation:changeR .8s infinite;
+    animation-delay: .2s;
+}   
+
+@keyframes changeL{
+    0%{
+         left: 50%;
+         opacity: 1;
+         width: 0%;
+    } 
+    100%{
+        left: 0;
+        opacity: 0;
+        width: 100%;
+    }
+} 
+@keyframes changeR{
+    0%{
+        left: 50%;
+        opacity: 1;
+        width: 0%;
+   } 
+   100%{
+       left: 0;
+       opacity: 0;
+       width: 100%;
+   }
+} 

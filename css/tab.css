@@ -1,0 +1,19 @@
+#tab{
+    width: 50vh;
+    height: 8vh;
+    background: #EEEEEE;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row;
+    align-items: center;
+    
+}
+ 
+#tab div{    
+    cursor:pointer;
+    width: auto;
+    padding: 2% 5%;
+}

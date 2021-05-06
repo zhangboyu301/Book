@@ -1,0 +1,61 @@
+
+.none{
+    display: none;
+}
+
+.appear{
+    animation:appearfade .5s forwards; 
+}
+@keyframes appearfade{
+    0%{ 
+        transform: translateY(100vh);
+    } 
+    100%{
+        transform: translateY(0vh);   
+    }
+}
+
+.disappear{
+    animation:disappearfade .5s forwards;
+    transform: translate(0);  
+}
+@keyframes disappearfade{
+    0%{ 
+        transform: translateY(0vh);
+    } 
+    100%{
+        transform: translateY(100vh);   
+    }
+}
+.active{
+    background: #CFD8DC;
+    border-radius: 15px;
+}
+
+
+
+.fadein{
+    animation:fadeink .5s forwards; 
+}
+@keyframes fadein{
+    0%{ 
+        transform: scale(0);
+    } 
+    100%{
+        transform: scale(1);   
+    }
+}
+
+.fadeout{
+    animation:fadeoutk .5s forwards;
+    transform: translate(0);  
+}
+@keyframes fadeoutk{
+    0%{ 
+        transform: scale(1);   
+    } 
+    100%{
+        transform: scale(0); 
+    }
+} 
+

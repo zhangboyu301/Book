@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/tab.css">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/key.css">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/transform.css">
+    <link rel="stylesheet" href="./css/notification.css">
+    <link rel="stylesheet" href="./css/title.css">
+</head>
+
+<body>
+    <!-- 页面大容器 -->
+    <div class="container">
+        <div class="head"></div>
+        <div id="phone" class="appear">
+            <div class="title">
+                <h2>拨号盘</h2>
+                <div>
+                    <span id="addPhoneNum" class="font" title="添加联系人">+</span>
+                </div>
+            </div>
+
+            <!-- 拨号盘 -->
+            <div id="key">
+                <input id="input" type="text" value="" placeholder="">
+                <div value='1'>1 <span value='1'>?</span> </div>
+                <div value='2'>2 <span value='2'>ABC</span></div>
+                <div value='3'>3 <span value='3'>DEF</span></div>
+                <div value='4'>4 <span value='4'>GHI</span></div>
+                <div value='5'>5 <span value='5'>JKL</span></div>
+                <div value='6'>6 <span value='6'>MON</span></div>
+                <div value='7'>7 <span value='7'>PQRS</span></div>
+                <div value='8'>8 <span value='8'>TUV</span></div>
+                <div value='9'>9 <span value='9'>WXYZ</span></div>
+                <div value='#'># <span value='#'> </span></div>
+                <div value='0'>0 <span value='0'>+</span></div>
+                <div value='*'>* <span value='*'> </span></div>
+                <div style="color: #00C853;">☎ <span>call</span></div>
+                <div style="color: #DD2C00;" id='deleteInput'> ◀<span>delete</span></div>
+            </div>
+        </div>
+
+        <!-- 长列表 -->
+        <div id="list" class="none">
+            <div class="title">
+                <h2>电话簿</h2>
+                <div>
+                </div>
+            </div>
+            <div id="scroll">
+                <div id="padding-top" class="baseLine"> 到顶啦！</div>
+                <!-- 两个盒子好计算，但是多一次排版绘制
+                    一个盒子不好计算，逻辑特别复杂 -->
+                <div id='phoneNameContainer'>
+                </div>
+                <div id="bottom-loading" class="baseLine loading">
+                    <div class="loadingAni">
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+                <div id="padding-bottom" class="baseLine"> </div>
+            </div>
+        </div>
+
+        <!-- tab -->
+        <div id="tab">
+            <div name='phone' class="active">拨号</div>
+            <div name='list'>通讯录</div>
+        </div>
+
+        <!-- 暂未组件化 弹窗 相关-->
+        <!-- 输入联系人弹窗 -->
+        <div id="notificationNumber" class="notification">
+            <div class="notificationMode"></div>
+            <div class="phoneNameC">
+                <span>输入联系人姓名:</span>
+                <input id="phoneName" class="inputDefault" type="text">
+                <div>
+                    <input id="phoneNameConfim" class="buttonDefault green" type="button" value="✔">
+                    <input id="phoneNameCancel" class="buttonDefault red" type="button" value="✘">
+                </div>
+            </div>
+        </div>
+
+        <!-- 练习人更改弹窗 -->
+        <div id="notificationChanegNum" class="notification">
+            <div class="notificationMode"></div>
+            <div class="phoneNameC">
+                <span>更改联系人姓名:</span>
+                <input id="ChanegphoneName" class="inputDefault" type="text">
+                <span>更改联系人电话:</span>
+                <input id="ChanegphoneNum" class="inputDefault" type="text">
+                <div>
+                    <input id="changephoneNameConfim" class="buttonDefault green" type="button" value="✔">
+                    <input id="changephoneNameCancel" class="buttonDefault red" type="button" value="✘">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+<script src="./js/mian.js"></script>
+<script src="./js/promote.js"></script>
+
+</html>
